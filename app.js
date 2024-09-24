@@ -15,6 +15,11 @@ app.use(express.json());
 
 dotenv.config();
 
+const PORT = process.env.PORT || 3000; 
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 function asyncHandler(handler) {
     return async function (req, res) {
         try {
