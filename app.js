@@ -113,6 +113,10 @@ app.delete('/tasks/:id', asyncHandler( async(req, res) => {
     }
 }));
 
+app.get('/', (req, res) => { // 루트 경로 
+    res.send('TODO API 완성!');
+  });  
+
 
 // 포트번호 
 mongoose.connect(process.env.DATABASE_URL).then(() => console.log('Connected to DB'));
